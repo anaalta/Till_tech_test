@@ -1,6 +1,7 @@
 function Till() {
   this.linePrices = [];
   this.total = 0;
+  this.tax = 0;
 }
 
 
@@ -16,6 +17,10 @@ function Till() {
     return this.total;
   };
 
+  Till.prototype.calculateTax = function() {
+    this.tax = this.total*8.64/100;
+    return this.tax;
+  }
 
 
 hipstercoffee = [{

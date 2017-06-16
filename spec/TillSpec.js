@@ -17,4 +17,11 @@ describe("Till", function() {
     till.calculateTotal();
     expect(till.total).toEqual(8.50);
   });
+
+  it("should show the tax on the bill", function() {
+    till.addToBill("Cafe Latte", 1);
+    till.addToBill("Americano", 1);
+    till.calculateTax();
+    expect(till.tax).toEqual(0,73);
+  });
 });
